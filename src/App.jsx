@@ -1,14 +1,14 @@
+import NavBar from "./components/Navbar";
+import HeroSection from "./sections/HeroSection";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import HeroSection from "./sections/HeroSection.jsx";
-import NavBar from "./components/Navbar.jsx";
-import MessageSection from "./sections/MessageSection.jsx";
-import FlavorSection from "./sections/FlavorSection.jsx";
+import MessageSection from "./sections/MessageSection";
+import FlavorSection from "./sections/FlavorSection";
 import { useGSAP } from "@gsap/react";
-import NutritionSection from "./sections/NutritionSection.jsx";
-import BenefitSection from "./sections/BenefitSection.jsx";
-import TestimonialSection from "./sections/TestimonialSection.jsx";
-import FooterSection from "./sections/FooterSection.jsx";
+import NutritionSection from "./sections/NutritionSection";
+import BenefitSection from "./sections/BenefitSection";
+import TestimonialSection from "./sections/TestimonialSection";
+import FooterSection from "./sections/FooterSection";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
