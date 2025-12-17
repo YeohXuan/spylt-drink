@@ -5,8 +5,9 @@ import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
   const isMobile = useMediaQuery({
-    query: "(max-wdith: 768px)",
+    query: "(max-width: 768px)",
   });
+
   const isTablet = useMediaQuery({
     query: "(max-width: 1024px)",
   });
@@ -17,7 +18,7 @@ const HeroSection = () => {
     });
 
     const tl = gsap.timeline({
-      delay: 0.5,
+      delay: 1,
     });
 
     tl.to(".hero-content", {
@@ -30,7 +31,7 @@ const HeroSection = () => {
         {
           duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          ease: "power1.inOut",
+          ease: "circ.out",
         },
         "-=0.5"
       )
@@ -79,10 +80,10 @@ const HeroSection = () => {
         ) : (
           <video
             src="/videos/hero-bg.mp4"
-            className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted
             playsInline
+            className="absolute inset-0 w-full h-full object-cover"
           />
         )}
         <div className="hero-content opacity-0">
@@ -90,11 +91,13 @@ const HeroSection = () => {
             <h1 className="hero-title">Freaking Delicious</h1>
           </div>
           <div
+            style={{
+              clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+            }}
             className="hero-text-scroll"
-            style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
           >
             <div className="hero-subtitle">
-              <h1>Protein + Caffeine</h1>
+              <h1>Protein + Caffine </h1>
             </div>
           </div>
 
@@ -103,7 +106,9 @@ const HeroSection = () => {
             your inner kid with every deliciously smooth chug.
           </h2>
 
-          <div className="hero-button">Chug a SPYLT</div>
+          <div className="hero-button">
+            <p>Chug a SPYLT</p>
+          </div>
         </div>
       </div>
     </section>
